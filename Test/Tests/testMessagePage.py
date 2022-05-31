@@ -1,5 +1,5 @@
 from Test.BaseTest.base import *
-from Utilts.utils import *
+from Utilities.utils import *
 
 phone= "0506040732"
 fullName= "Israel Israeli"
@@ -15,7 +15,7 @@ def test_send_message_correctly():
     form_element = driver.find_elements(By.XPATH, "//form/child::*")
     expected_is_enabled = True
 
-    test_send_message_button(form_element, data_fields, expected_is_enabled)
+    send_message_button(form_element, data_fields, expected_is_enabled)
     form_element[-1].click()
 
 #2
@@ -27,7 +27,7 @@ def test_send_message_incorrectly_whenPhoneFieldNull():
     form_element = driver.find_elements(By.XPATH, "//form/child::*")
     expected_is_enabled = False
 
-    test_send_message_button(form_element, data_fields, expected_is_enabled)
+    send_message_button(form_element, data_fields, expected_is_enabled)
 
 #3
 def test_send_message_incorrectly_whenNameFieldNull():
@@ -38,7 +38,7 @@ def test_send_message_incorrectly_whenNameFieldNull():
     form_element = driver.find_elements(By.XPATH, "//form/child::*")
     expected_is_enabled = False
 
-    test_send_message_button(form_element, data_fields, expected_is_enabled)
+    send_message_button(form_element, data_fields, expected_is_enabled)
     sleep(3)
 
 #4
@@ -50,7 +50,7 @@ def test_send_message_incorrectly_whenMessageFieldNull():
     form_element = driver.find_elements(By.XPATH, "//form/child::*")
     expected_is_enabled = False
 
-    test_send_message_button(form_element, data_fields, expected_is_enabled)
+    send_message_button(form_element, data_fields, expected_is_enabled)
     sleep(3)
 #5
 def test_send_message_incorrectly_whenPhoneAndNameFieldsAreNull():
@@ -61,7 +61,7 @@ def test_send_message_incorrectly_whenPhoneAndNameFieldsAreNull():
     form_element = driver.find_elements(By.XPATH, "//form/child::*")
     expected_is_enabled = False
 
-    test_send_message_button(form_element, data_fields , expected_is_enabled)
+    send_message_button(form_element, data_fields , expected_is_enabled)
     sleep(3)
 
 #6
@@ -73,7 +73,7 @@ def test_send_message_incorrectly_whenNameAndMessageFieldAreNull():
     form_element = driver.find_elements(By.XPATH, "//form/child::*")
     expected_is_enabled = False
 
-    test_send_message_button(form_element, data_fields , expected_is_enabled)
+    send_message_button(form_element, data_fields , expected_is_enabled)
     sleep(3)
 
 #7
@@ -85,7 +85,7 @@ def test_send_message_incorrectly_whenPhoneAndMessageFieldAreNull():
     form_element = driver.find_elements(By.XPATH, "//form/child::*")
     expected_is_enabled = False
 
-    test_send_message_button(form_element, data_fields , expected_is_enabled)
+    send_message_button(form_element, data_fields , expected_is_enabled)
     sleep(3)
 
 #8
@@ -97,7 +97,7 @@ def test_send_message_incorrectly_whenAllFieldsAreNull():
     form_element = driver.find_elements(By.XPATH, "//form/child::*")
     expected_is_enabled = False
 
-    test_send_message_button(form_element, data_fields , expected_is_enabled)
+    send_message_button(form_element, data_fields , expected_is_enabled)
     sleep(3)
 
 #9
@@ -109,7 +109,7 @@ def test_send_message_incorrectly_byLessThan10DigitsInPhoneField():
     form_element = driver.find_elements(By.XPATH, "//form/child::*")
     expected_is_enabled = False
 
-    test_send_message_button(form_element, data_fields, expected_is_enabled)
+    send_message_button(form_element, data_fields, expected_is_enabled)
 
 #10
 def test_send_message_incorrectly_whenNameFieldsIsWithNumbers():
@@ -120,7 +120,7 @@ def test_send_message_incorrectly_whenNameFieldsIsWithNumbers():
     form_element = driver.find_elements(By.XPATH, "//form/child::*")
     expected_is_enabled = False
 
-    test_send_message_button(form_element, data_fields, expected_is_enabled)
+    send_message_button(form_element, data_fields, expected_is_enabled)
     sleep(3)
 
 
